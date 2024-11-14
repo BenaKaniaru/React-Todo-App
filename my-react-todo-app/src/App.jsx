@@ -1,10 +1,10 @@
 import React from "react";
-import TodoApp from "./components/TodoApp";
+import TodoInput from "./components/TodoInput";
 
 function App() {
   return (
     <>
-      <TodoApp />
+      <TodoInput />
     </>
   );
 }
