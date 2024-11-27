@@ -1,0 +1,57 @@
+.todoForm {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 30px;
+  box-shadow: 0 4px 6px rgb(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 600px) {
+  .todoForm {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .todoForm {
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .todoForm {
+    width: 200px;
+  }
+}
+
+.inputContainer {
+  display: flex;
+  justify-content: space-between;
+}
+.modernInput {
+  border: none;
+  color: black;
+  font-size: 16px;
+  flex: 1;
+}
+.modernInput:focus {
+  outline: none;
+}
+
+.modernButton {
+  display: inline-block;
+  background-color: blue;
+  color: white;
+  border-radius: 4px;
+  padding: 4px 8px;
+  border: none;
+  cursor: pointer;
+  width: 60px;
+}
+
+.modernButton:hover {
+  opacity: 0.8;
+  font-weight: bold;
+}

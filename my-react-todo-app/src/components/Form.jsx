@@ -1,23 +1,31 @@
 import { useState } from "react";
+import styles from "./form.module.css";
 
 export default function Form({ todos, setTodos }) {
-  const [todo, setTodo] = useState("");
+  const [task, setTask] = useState("");
   function handleSubmit(e) {
     e.preventDefault();
-    setTodos([...todos, todo]);
-    setTodo("");
+    if (task.trim() === "") {
+      alert("Hey Yoh! Task name cannot be empty. Add a name or Bounce!");
+    } else {
+      setTodos([...todos, task]);
+      setTask("");
+    }
   }
   return (
-    <div>
-      <form onSubmit={(e) => handleSubmit(e)}>
+    <form className={styles.todoForm} onSubmit={(e) => handleSubmit(e)}>
+      <div className={styles.inputContainer}>
         <input
-          onChange={(e) => setTodo(e.target.value)}
+          className={styles.modernInput}
+          onChange={(e) => setTask(e.target.value)}
           type="text"
-          value={todo}
+          value={task}
           placeholder="Add a task"
         />
-        <button type="submit">Add</button>
-      </form>
-    </div>
+        <button className={styles.modernButton} type="submit">
+          Add
+        </button>
+      </div>
+    </form>
   );
 }

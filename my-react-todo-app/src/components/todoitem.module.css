@@ -1,0 +1,54 @@
+.item {
+  color: black;
+  margin: 0 auto;
+}
+
+.itemContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.itemContainer:hover {
+  .block {
+    display: inline-block;
+  }
+}
+.block {
+  width: 3px;
+  height: 20px;
+  background-color: blue;
+  display: none;
+}
+.itemName {
+  font-weight: 600;
+  padding: 10px 5px;
+  font-size: 16px;
+  flex: 1;
+  margin-left: 4px;
+}
+
+@media screen and (min-width: 500px) {
+  .itemName {
+    font-size: 18px;
+  }
+}
+
+.deleteButton {
+  background-color: red;
+  width: 60px;
+  color: white;
+  border: none;
+  padding: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.deleteButton:hover {
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+.line {
+  border: 1px solid #f4f4f4;
+}
