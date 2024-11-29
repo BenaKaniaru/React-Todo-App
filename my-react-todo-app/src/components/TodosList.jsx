@@ -2,10 +2,16 @@ import TodoItem from "./TodoItem";
 import styles from "./todoslist.module.css";
 
 export default function TodosList({ todos, setTodos }) {
+  const sortedTodos = todos.slice().sort((a, b) => {
+    if (a.done === b.done) {
+      return a.name.localeCompare(b.name);
+    }
+    return a.done - b.done; // Unfinished tasks first
+  });
   return (
     <div className={styles.list}>
       {todos.length > 0 ? (
-        todos.map((task) => (
+        sortedTodos.map((task) => (
           // passes the todo data to the child component (TodoItem)
           <TodoItem
             key={task.name}
