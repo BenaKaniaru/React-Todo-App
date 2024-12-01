@@ -25,8 +25,34 @@
   font-weight: 600;
   padding: 10px 5px;
   font-size: 16px;
-  flex: 1;
   margin-left: 4px;
+  flex: 1;
+}
+
+.inprogressStatus {
+  background-color: red;
+  color: white;
+  border: none;
+  font-size: 10px;
+  align-items: center;
+  margin-left: 4px;
+  border-radius: 2px;
+  padding: 2px;
+}
+
+.completeStatus {
+  background-color: green;
+  color: white;
+  border: none;
+  font-size: 10px;
+  align-items: center;
+  margin-left: 4px;
+  border-radius: 2px;
+  padding: 2px;
+}
+
+.notComplete {
+  display: none;
 }
 
 @media screen and (min-width: 500px) {

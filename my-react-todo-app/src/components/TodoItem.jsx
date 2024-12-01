@@ -22,6 +22,8 @@ export default function TodoItem({ task, todos, setTodos }) {
   }
 
   const className = task.done ? styles.taskCompleted : "";
+  const inprogress = !task.done ? styles.inprogressStatus : styles.notComplete;
+  const complete = task.done ? styles.completeStatus : styles.notComplete;
 
   //const { todo } = props;
   //receives todo data from the parent component (TodoItem) through props(destructured)
@@ -33,6 +35,8 @@ export default function TodoItem({ task, todos, setTodos }) {
           <span className={className} onClick={() => handleClick(task)}>
             {task.name}
           </span>
+          <button className={inprogress}>inprogess</button>
+          <button className={complete}>completed</button>
         </div>
         <button
           className={styles.deleteButton}
